@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Privacy Policy — First Anvil</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 60px 32px 80px; }
+    .legal-page h1 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: 42px; color: var(--navy);
+      margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .legal-page .effective {
+      font-family: var(--mono); font-size: 13px;
+      color: var(--ink-soft); margin-bottom: 48px;
+    }
+    .legal-page h2 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: 24px; color: var(--navy);
+      margin: 40px 0 16px; letter-spacing: -0.005em;
+    }
+    .legal-page p, .legal-page li {
+      font-size: 16px; line-height: 1.7;
+      color: var(--ink); margin-bottom: 14px;
+    }
+    .legal-page ul { margin-left: 24px; margin-bottom: 16px; }
+    .legal-page a { color: var(--bronze-deep); }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" style="text-decoration:none;">
+      <svg viewBox="0 0 40 40" width="36" height="36" class="brand-mark">
+        <path d="M6,15 L34,15 L31,18 L29,20 L11,20 L9,18 Z M11,20 L29,20 L26,32 L14,32 Z" fill="#B8860B"/>
+        <rect x="13" y="32" width="14" height="3" fill="#0F1E3A"/>
+      </svg>
+      <span class="wordmark">First Anvil</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#download" class="btn btn-small">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal-page">
+
+<h1>Privacy Policy</h1>
+<div class="effective">Effective date: May 28, 2026</div>
+
+<h2>1. Introduction</h2>
+<p>First Anvil is a local-first e-discovery application produced by uVinto. We designed it to keep client data — including potentially privileged, confidential, or otherwise sensitive litigation material — entirely on the attorney's own machine. This policy explains exactly what the software does (and does not do) with your information.</p>
+
+<h2>2. What stays on your Mac, period</h2>
+<p>All of the following data is stored exclusively in the matter folder (<code>.fdmatter</code>) that you create. None of it is transmitted to uVinto, to any server we operate, or to any third party:</p>
+<ul>
+  <li>Original evidence files you ingest</li>
+  <li>Extracted text, OCR output, metadata</li>
+  <li>Tags, redactions, notes, audit log entries</li>
+  <li>Productions you build (Bates-stamped PDFs, .DAT/.OPT load files)</li>
+  <li>Productions you import from opposing counsel</li>
+  <li>Cryptographic hashes (SHA-256, MD5) of every file</li>
+  <li>Reviewer names, timestamps, and any other audit attribution</li>
+</ul>
+<p>The application has no built-in network features that upload evidence. It does not phone home. It does not include analytics, usage telemetry, or crash reporting unless you affirmatively opt in.</p>
+
+<h2>3. Information we do NOT collect</h2>
+<p>We do not collect, store, see, or share:</p>
+<ul>
+  <li>The contents of any document you ingest</li>
+  <li>Custodian names, email addresses, or any personally identifying information from your evidence</li>
+  <li>Search queries</li>
+  <li>Tag, redaction, or production activity</li>
+  <li>The names or paths of any matter folders</li>
+  <li>Your reviewer name as configured in Settings</li>
+</ul>
+
+<h2>4. Information that may transit our servers (limited)</h2>
+<p>The only network requests the application makes by default are:</p>
+<ul>
+  <li><strong>Software-update checks via Sparkle.</strong> The app contacts our static appcast URL on a daily schedule to learn whether a new version has been published. The request includes your current version number and a User-Agent string identifying the OS version. It does not include any client data, document content, matter names, or personally identifying information.</li>
+</ul>
+<p>You may disable auto-update checks at any time in Settings → General.</p>
+
+<h2>5. Optional features</h2>
+<p>Two features, both OFF by default, may transmit information:</p>
+<ul>
+  <li><strong>Crash reporting:</strong> if you opt in, an anonymized stack trace and OS info are sent to us when the app crashes. No document data is ever included in a crash report.</li>
+  <li><strong>Sidecar tools:</strong> if you have installed Homebrew tools (readpst, msgconvert, soffice/LibreOffice, ocrmypdf), First Anvil launches them as local subprocesses to process specific file formats. These tools execute entirely on your machine and do not transmit anything externally.</li>
+</ul>
+
+<h2>6. Cloud storage and sync</h2>
+<p>First Anvil is local-first. We do not provide cloud storage. If you choose to place your matter folder on a cloud-synced location (iCloud Drive, Dropbox, OneDrive, etc.), that storage's privacy policy governs the file syncing, not this one. We recommend storing matter folders only on volumes you control.</p>
+
+<h2>7. Audit log and defensibility</h2>
+<p>The hash-chained audit log inside each matter is intentionally tamper-evident. It is local to that matter and is never transmitted to us. The reviewer name you configure is the only attribution recorded; we do not learn it.</p>
+
+<h2>8. Children</h2>
+<p>The software is intended for use by licensed attorneys and their staff. It is not directed to children under 13, and we do not knowingly receive any information from children.</p>
+
+<h2>9. Your control</h2>
+<p>Because data lives in your matter folder:</p>
+<ul>
+  <li>To delete data, delete or move the folder. There is no remote copy.</li>
+  <li>To back up data, copy the folder. To restore, copy it back.</li>
+  <li>To take data with you when changing computers, copy the folder.</li>
+  <li>To prove no data has left your machine, audit your network logs — the only outbound traffic should be the update-check ping described above.</li>
+</ul>
+
+<h2>10. Privacy of third-party recipients (e.g., opposing counsel)</h2>
+<p>When you produce documents to an opposing party, that production leaves your machine by means you control (email, courier, file share). uVinto plays no role in that transmission and receives nothing.</p>
+
+<h2>11. Security</h2>
+<p>All evidence is content-addressed and hashed at ingest. Productions are signed by a manifest.json with cryptographic hashes. The app does not modify original files. Redactions are stored as separate vector rectangles and are only burned into rasterized copies at production time.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>If we materially change this policy, the new version will be included in the next software update and the effective date above will be updated. Continued use of the software after an update constitutes acceptance of the revised policy.</p>
+
+<h2>13. Contact</h2>
+<p>
+  Questions about this policy can be sent to:<br>
+  uVinto<br>
+  Attn: First Anvil Privacy<br>
+  <a href="mailto:bg@thegordonfirm.com">bg@thegordonfirm.com</a>
+</p>
+
+<h2>14. Florida professional responsibility</h2>
+<p>First Anvil is a tool, not a law firm. Use of the software does not create an attorney-client relationship with uVinto. Attorneys remain responsible for their own compliance with the Florida Rules of Professional Conduct, including their duty of confidentiality under Rule 4-1.6 and their duty of technological competence.</p>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>&copy; 2026 uVinto. All rights reserved.</span>
+      <a href="index.html">← Back to First Anvil</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

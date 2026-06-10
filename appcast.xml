@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<!--
+  First Anvil — Sparkle update feed
+
+  When this site is deployed at https://firstanvil.uvinto.com/ (or wherever),
+  the in-app "Check for Updates" hits THIS file.
+
+  Workflow on each release:
+    1. Bump version + CFBundleVersion in Info.plist
+    2. git tag vX.Y.Z && git push --tags
+    3. GitHub Actions builds + signs + notarizes + uploads to GitHub Release
+    4. Generate the Ed25519 signature for the .zip:
+         .build/checkouts/Sparkle/bin/sign_update FormaDiscovery-vX.Y.Z.zip
+    5. Add a new <item> to this file (newest first) with:
+         - sparkle:version           = CFBundleVersion           (e.g. 20260528)
+         - sparkle:shortVersionString = CFBundleShortVersionString (e.g. 0.1.3)
+         - sparkle:edSignature       = the signature from step 4
+         - length                    = file size in bytes
+         - enclosure url             = direct download URL to the .zip
+    6. Commit + push this file (separately from the app's repo)
+
+  The keypair: Sparkle's bin/generate_keys is run ONCE per product. Public
+  key goes in Info.plist as SUPublicEDKey. Private key stays in Keychain
+  (or in 1Password as backup) and is used only when signing updates.
+
+  Sparkle ignores items whose minimumSystemVersion exceeds the client's
+  OS, so 14.0 means everyone on macOS 14+ can take the update.
+-->
+<rss version="2.0"
+     xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>First Anvil</title>
+    <link>https://firstanvil.uvinto.com/appcast.xml</link>
+    <description>First Anvil software updates</description>
+    <language>en</language>
+
+    <!--
+      v0.1.2 — first publicly released version. Customers who downloaded
+      this build get the update notification when v0.1.3 lands here.
+
+      Commented out until we have the Ed25519 signing keypair generated
+      AND the appcast is actually hosted somewhere with HTTPS. Sparkle
+      will fall back to "you're up to date" while this stays empty,
+      which is the right behavior pre-launch.
+
+    <item>
+      <title>Version 0.1.2</title>
+      <pubDate>Wed, 28 May 2026 01:57:00 +0000</pubDate>
+      <sparkle:version>20260527</sparkle:version>
+      <sparkle:shortVersionString>0.1.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h3>What's new in 0.1.2</h3>
+        <ul>
+          <li>Sparkle framework + XPC services now bundled correctly (fixes the "updater failed to start" error on first launch)</li>
+          <li>Bundled in Contents/Frameworks instead of relying on PATH-installed Sparkle</li>
+          <li>Each nested helper (Updater.app, Installer.xpc, Downloader.xpc, Autoupdate) individually signed with hardened runtime</li>
+          <li>SUEnableInstallerLauncherService + SUEnableDownloaderService Info.plist keys added</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://github.com/sgtreas/FirstAnvil/releases/download/v0.1.2/FormaDiscovery-v0.1.2.zip"
+        sparkle:edSignature="PASTE_SIGNATURE_FROM_sign_update_HERE"
+        length="6196297"
+        type="application/octet-stream" />
+    </item>
+    -->
+
+  </channel>
+</rss>

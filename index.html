@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>First Anvil — Local-first e-discovery for solo &amp; small-firm Mac litigators</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The only modern, native-macOS, local-first e-discovery platform with cryptographic chain-of-custody. Every document stays on your Mac. One-time license. Made by uVinto.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" width="36" height="36" aria-label="First Anvil mark" class="brand-mark">
+        <!-- Stylized anvil silhouette in bronze -->
+        <path d="M6,15 L34,15 L31,18 L29,20 L11,20 L9,18 Z M11,20 L29,20 L26,32 L14,32 Z" fill="#B8860B"/>
+        <rect x="13" y="32" width="14" height="3" fill="#0F1E3A"/>
+      </svg>
+      <span class="wordmark">First Anvil</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#download" class="btn btn-small">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>The instrument of the record.</h1>
+    <p class="lede">First Anvil is a local-first e-discovery platform for solo and small-firm litigators. Every document on your Mac. Every action on the chain. Verify the integrity of your matter in one click.</p>
+    <div class="cta">
+      <a href="#download" class="btn btn-primary">Download First Anvil</a>
+      <span class="cta-meta">Mac · macOS 14+ · 24 MB · $799 one-time</span>
+    </div>
+  </div>
+</section>
+
+<section class="principles">
+  <div class="wrap">
+    <h2>Three principles</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Local-first</h3>
+        <p>Every byte of your matter stays in a single <code>.fdmatter</code> folder on your Mac. Copy it. Archive it. Put it on iCloud. You control where the data lives. We never see it.</p>
+      </div>
+      <div class="card">
+        <h3>Defensible by design</h3>
+        <p>Every state change writes to a SHA-256 hash-chained audit log with an NDJSON disk mirror. Tampering breaks the chain visibly. One click verifies the integrity of every action — including, especially, by us.</p>
+      </div>
+      <div class="card">
+        <h3>A complete loop</h3>
+        <p>Ingest opposing's productions with cross-overlap detection. Build outbound productions with redaction burn-in and manifest hashes. Confidentiality designations travel from in to out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="wrap">
+    <h2>What's in v1</h2>
+    <div class="grid grid-2">
+
+      <div class="feature">
+        <h4>Ingest</h4>
+        <p>PDF, Office (modern + legacy), email (EML/MBOX/MSG/PST), images, audio, video metadata, plain text. SHA-256 and MD5 hashing. Content-addressed blob storage with automatic deduplication.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Review</h4>
+        <p>Nine-tag palette with 1–9 hotkey coding. J/K navigation. Bulk operations. Family-aware grouping. Conversation rollup. Per-doc notes. Touched-today sidebar.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Redact</h4>
+        <p>Reversible vector redactions until production. Then burned in via 200-DPI rasterization — the underlying text is removed, not just covered. Defensible.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Produce</h4>
+        <p>Bates-stamped PDFs with redaction burn-in. Concordance <code>.DAT</code> + Opticon <code>.OPT</code> load files. JSON manifest with SHA-256 of every output file.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Receive</h4>
+        <p>Concordance-style production import with column auto-mapping (200+ aliases). Five-strategy fuzzy file lookup. Auto-tag by volume name. Detect overlap with your own productions.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Compare</h4>
+        <p>SHA-256 exact-duplicate detection across volumes. MinHash near-duplicate detection. Coding-consistency prompt when a near-dup of a privileged doc surfaces in another production.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Confidentiality</h4>
+        <p>Designation tiers seeded with industry defaults (CONFIDENTIAL, AEO, HC-AEO, Trade Secret). Protective order / NDA wizard reads the order and proposes matching tiers via on-device LLM.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Predictive coding (TAR)</h4>
+        <p>Multinomial Naive Bayes on your tags. Continuous Active Learning surfaces the most-uncertain documents. Concept search via Apple's NLEmbedding — fully local.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Detect</h4>
+        <p>PII, PHI, privilege, and risk markers via NSDataDetector + regex. Risk-score aggregation per document. Sidebar filter for high-risk material.</p>
+      </div>
+
+      <div class="feature">
+        <h4>Defensibility</h4>
+        <p>Hash-chained audit log with NDJSON disk mirror. One-click integrity verification reports the first inconsistency. Every action timestamped and attributed to the reviewer.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="not">
+  <div class="wrap">
+    <h2>What it's not</h2>
+    <ul class="not-list">
+      <li>Not a web app.</li>
+      <li>Not multi-reviewer (in v1).</li>
+      <li>Not cross-platform. macOS 14+ only.</li>
+      <li>Not cloud-hosted. Under any condition.</li>
+      <li>Not distributed via the Mac App Store.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <div class="price-card">
+      <div class="price">$799<span class="price-unit">one-time</span></div>
+      <ul class="price-lines">
+        <li>For a single Mac.</li>
+        <li>Includes one year of updates and support.</li>
+        <li>Then $199/year if you want updates to continue.</li>
+        <li>Stop paying, and the app keeps working.</li>
+      </ul>
+      <p class="price-emphasis">
+        No per-gigabyte fees.<br>
+        No cloud subscription.<br>
+        Your evidence never leaves your machine.
+      </p>
+      <a href="#download" class="btn btn-primary btn-large">Buy First Anvil</a>
+      <p class="price-fine">14-day money-back, no questions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="download">
+  <div class="wrap">
+    <h2>Download</h2>
+    <p>Latest release: <strong>v0.1.2</strong> · macOS 14+ · 24&nbsp;MB · signed and notarized.</p>
+    <div class="cta">
+      <a href="https://github.com/sgtreas/FirstAnvil/releases/latest" class="btn btn-primary btn-large">Download from GitHub</a>
+    </div>
+    <p class="install-help">
+      Unzip, drag <code>FormaDiscovery.app</code> to <code>/Applications</code>, double-click. First launch may show a one-time "from the internet, are you sure?" dialog. After that, it just opens.
+    </p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>
+      We built First Anvil because we needed it ourselves.
+    </p>
+    <p>
+      Brent A. Gordon is a Board-Certified Real Estate Attorney with The Gordon Law Firm, P.A., in Lutz, Florida. He spent two decades watching solo and small-firm litigators get squeezed by e-discovery vendors who charge by the gigabyte for tools designed for Am Law 200.
+    </p>
+    <p>
+      First Anvil is the tool he wanted. Native macOS. Local-first. One-time price. Hash-chained audit log so opposing counsel — or any judge — can verify the integrity of every document and every action.
+    </p>
+    <p>
+      We don't store your matters. We don't see your custodians. We don't sell your data, because we never have it. <a href="https://uvinto.com">uVinto</a> is a single-product company; that product is First Anvil; the only money we take is the one-time license fee.
+    </p>
+    <p class="about-cta">
+      If you're a Florida solo or small-firm litigator using a Mac, this is for you.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand small">
+          <svg viewBox="0 0 40 40" width="22" height="22" class="brand-mark">
+            <path d="M6,15 L34,15 L31,18 L29,20 L11,20 L9,18 Z M11,20 L29,20 L26,32 L14,32 Z" fill="#B8860B"/>
+            <rect x="13" y="32" width="14" height="3" fill="#0F1E3A"/>
+          </svg>
+          <span class="wordmark">First Anvil</span>
+        </div>
+        <p class="footer-tag">Every document, on the record.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#download">Download</a>
+        <a href="https://github.com/sgtreas/FirstAnvil/releases">All releases</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#eula">EULA</a>
+        <a href="acknowledgments.html">Acknowledgments</a>
+      </div>
+      <div>
+        <h5>Made by</h5>
+        <a href="https://uvinto.com">uVinto</a>
+        <p class="footer-meta">Tampa Bay, Florida<br>
+          <a href="mailto:bg@thegordonfirm.com">bg@thegordonfirm.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 uVinto. All rights reserved.</span>
+      <span class="footer-disclaimer">First Anvil is a product of uVinto. The Gordon Law Firm, P.A. is a separate Florida professional association.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

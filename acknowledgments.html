@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Acknowledgments — First Anvil</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-page { max-width: 760px; margin: 0 auto; padding: 60px 32px 80px; }
+    .legal-page h1 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: 42px; color: var(--navy);
+      margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .legal-page .lede {
+      font-size: 17px; color: var(--ink-soft);
+      margin-bottom: 48px; font-family: var(--sans);
+    }
+    .legal-page h2 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: 24px; color: var(--navy);
+      margin: 40px 0 16px; letter-spacing: -0.005em;
+    }
+    .package {
+      padding: 18px 20px;
+      margin-bottom: 14px;
+      background: var(--cream-warm);
+      border-radius: 6px;
+      border-left: 3px solid var(--bronze);
+    }
+    .pkg-name {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--navy);
+      margin-right: 8px;
+    }
+    .pkg-license {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      background: var(--paper);
+      color: var(--ink-soft);
+      padding: 2px 8px;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+    .pkg-author { font-size: 14px; color: var(--ink-soft); margin: 4px 0; }
+    .pkg-purpose { font-size: 14px; color: var(--ink-soft); }
+    .pkg-link {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--bronze-deep);
+      text-decoration: none;
+      margin-top: 4px;
+      word-break: break-all;
+    }
+    .pkg-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand" style="text-decoration:none;">
+      <svg viewBox="0 0 40 40" width="36" height="36" class="brand-mark">
+        <path d="M6,15 L34,15 L31,18 L29,20 L11,20 L9,18 Z M11,20 L29,20 L26,32 L14,32 Z" fill="#B8860B"/>
+        <rect x="13" y="32" width="14" height="3" fill="#0F1E3A"/>
+      </svg>
+      <span class="wordmark">First Anvil</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#download" class="btn btn-small">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal-page">
+
+<h1>Acknowledgments</h1>
+<p class="lede">First Anvil would not exist without the work of these open-source projects.</p>
+
+<h2>Swift packages</h2>
+
+<div class="package">
+  <span class="pkg-name">GRDB.swift</span><span class="pkg-license">MIT</span>
+  <div class="pkg-author">Gwendal Roué</div>
+  <div class="pkg-purpose">SQLite toolkit; powers every database query in the matter store.</div>
+  <a href="https://github.com/groue/GRDB.swift" class="pkg-link">github.com/groue/GRDB.swift</a>
+</div>
+
+<div class="package">
+  <span class="pkg-name">ZIPFoundation</span><span class="pkg-license">MIT</span>
+  <div class="pkg-author">Thomas Zoechling</div>
+  <div class="pkg-purpose">Pure-Swift zip read/write — used for OOXML extraction, snapshot bundles, and production archives.</div>
+  <a href="https://github.com/weichsel/ZIPFoundation" class="pkg-link">github.com/weichsel/ZIPFoundation</a>
+</div>
+
+<div class="package">
+  <span class="pkg-name">Sparkle</span><span class="pkg-license">MIT</span>
+  <div class="pkg-author">Andy Matuschak, Sparkle Project</div>
+  <div class="pkg-purpose">Auto-update framework with EdDSA-signed appcast verification.</div>
+  <a href="https://github.com/sparkle-project/Sparkle" class="pkg-link">github.com/sparkle-project/Sparkle</a>
+</div>
+
+<h2>Sidecar tools (optional, installed via Homebrew)</h2>
+
+<div class="package">
+  <span class="pkg-name">libpff (readpst)</span><span class="pkg-license">LGPL</span>
+  <div class="pkg-author">Joachim Metz</div>
+  <div class="pkg-purpose">Outlook PST/OST archive expansion. Invoked via Homebrew when present.</div>
+  <a href="https://github.com/libyal/libpff" class="pkg-link">github.com/libyal/libpff</a>
+</div>
+
+<div class="package">
+  <span class="pkg-name">Email-Outlook-Message-Perl (msgconvert)</span><span class="pkg-license">GPL-2.0</span>
+  <div class="pkg-author">Matijs van Zuijlen</div>
+  <div class="pkg-purpose">Individual Outlook .msg → EML conversion.</div>
+  <a href="https://github.com/mvz/email-outlook-message-perl" class="pkg-link">github.com/mvz/email-outlook-message-perl</a>
+</div>
+
+<div class="package">
+  <span class="pkg-name">LibreOffice (soffice headless)</span><span class="pkg-license">MPL-2.0</span>
+  <div class="pkg-author">The Document Foundation</div>
+  <div class="pkg-purpose">Legacy .doc / .xls / .ppt → OOXML conversion. Invoked headless.</div>
+  <a href="https://www.libreoffice.org" class="pkg-link">libreoffice.org</a>
+</div>
+
+<div class="package">
+  <span class="pkg-name">ocrmypdf</span><span class="pkg-license">MPL-2.0</span>
+  <div class="pkg-author">James R. Barlow</div>
+  <div class="pkg-purpose">OCR text layer on image-only PDFs. Invoked from right-click → Run OCR.</div>
+  <a href="https://github.com/ocrmypdf/OCRmyPDF" class="pkg-link">github.com/ocrmypdf/OCRmyPDF</a>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>&copy; 2026 uVinto. All rights reserved.</span>
+      <a href="index.html">← Back to First Anvil</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
