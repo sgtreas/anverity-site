@@ -1,8 +1,8 @@
 <?xml version="1.0" standalone="yes"?>
 <!--
-  First Anvil — Sparkle update feed
+  Anverity — Sparkle update feed
 
-  When this site is deployed at https://firstanvil.uvinto.com/ (or wherever),
+  When this site is deployed at https://anverity.uvinto.com/ (or wherever),
   the in-app "Check for Updates" hits THIS file.
 
   Workflow on each release:
@@ -10,7 +10,7 @@
     2. git tag vX.Y.Z && git push --tags
     3. GitHub Actions builds + signs + notarizes + uploads to GitHub Release
     4. Generate the Ed25519 signature for the .zip:
-         .build/checkouts/Sparkle/bin/sign_update FormaDiscovery-vX.Y.Z.zip
+         .build/checkouts/Sparkle/bin/sign_update Anverity-vX.Y.Z.zip
     5. Add a new <item> to this file (newest first) with:
          - sparkle:version           = CFBundleVersion           (e.g. 20260528)
          - sparkle:shortVersionString = CFBundleShortVersionString (e.g. 0.1.3)
@@ -30,9 +30,9 @@
      xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>First Anvil</title>
-    <link>https://firstanvil.uvinto.com/appcast.xml</link>
-    <description>First Anvil software updates</description>
+    <title>Anverity</title>
+    <link>https://anverity.uvinto.com/appcast.xml</link>
+    <description>Anverity software updates</description>
     <language>en</language>
 
     <!--
@@ -60,7 +60,7 @@
         </ul>
       ]]></description>
       <enclosure
-        url="https://github.com/sgtreas/FirstAnvil/releases/download/v0.1.2/FormaDiscovery-v0.1.2.zip"
+        url="https://github.com/sgtreas/Anverity/releases/download/v0.1.2/Anverity-v0.1.2.zip"
         sparkle:edSignature="PASTE_SIGNATURE_FROM_sign_update_HERE"
         length="6196297"
         type="application/octet-stream" />

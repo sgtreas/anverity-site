@@ -1,6 +1,6 @@
 # site/
 
-The First Anvil marketing site. Static HTML/CSS — no build step, no
+The Anverity marketing site. Static HTML/CSS — no build step, no
 JavaScript, no server required. Lives in this folder so it travels
 with the product code, but is **independent** from the app build:
 deploying the site does not affect the app and vice versa.
@@ -40,12 +40,12 @@ You have three reasonable hosts. Pick whichever is least friction.
 
 ### Option A — GitHub Pages (free, easiest)
 
-1. Create a new GitHub repo: `sgtreas/firstanvil-site` (PUBLIC — GitHub
+1. Create a new GitHub repo: `sgtreas/anverity-site` (PUBLIC — GitHub
    Pages only works free on public repos)
 2. Push the contents of THIS `site/` directory to the root of that repo
 3. In repo settings → Pages → Source → main branch / root
-4. Your URL becomes `sgtreas.github.io/firstanvil-site`
-5. (Optional) Custom domain: add `firstanvil.uvinto.com` to repo
+4. Your URL becomes `sgtreas.github.io/anverity-site`
+5. (Optional) Custom domain: add `anverity.uvinto.com` to repo
    Pages settings and CNAME it from your uvinto.com DNS
 
 ### Option B — Cloudflare Pages (free, faster CDN)
@@ -53,7 +53,7 @@ You have three reasonable hosts. Pick whichever is least friction.
 1. Sign in to dash.cloudflare.com → Pages → Create application
 2. Connect to the same GitHub repo you used for Option A
 3. Cloudflare auto-deploys on every push
-4. Add custom domain: `firstanvil.uvinto.com`
+4. Add custom domain: `anverity.uvinto.com`
 5. Cloudflare handles HTTPS automatically
 
 ### Option C — uvinto.com subdirectory
@@ -69,7 +69,7 @@ Two things to update in the app:
 
 ### 1. Sparkle feed URL
 
-If you publish to a URL other than `https://firstanvil.uvinto.com/appcast.xml`,
+If you publish to a URL other than `https://anverity.uvinto.com/appcast.xml`,
 update two places to match:
 
 - `Resources/Info.plist` → `SUFeedURL`
@@ -98,8 +98,8 @@ Output:
 Then for every release going forward:
 
 ```bash
-# After GitHub Actions has produced FormaDiscovery-vX.Y.Z.zip:
-.build/checkouts/Sparkle/bin/sign_update FormaDiscovery-vX.Y.Z.zip
+# After GitHub Actions has produced Anverity-vX.Y.Z.zip:
+.build/checkouts/Sparkle/bin/sign_update Anverity-vX.Y.Z.zip
 ```
 
 Copy the resulting `sparkle:edSignature="..."` value and add an
